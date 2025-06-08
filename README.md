@@ -1,4 +1,4 @@
-# Face Detection with OpenCV and MediaPipe
+# Face Detection with OpenCV and MediaPipe-silicon
 
 This is a basic real-time face detection script using your webcam. It uses [MediaPipe](https://github.com/google/mediapipe) for face detection and [OpenCV](https://opencv.org/) for image processing and display.
 
