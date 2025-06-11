@@ -1,23 +1,23 @@
-# Face Detection with OpenCV and MediaPipe-silicon
+👁️‍🗨️ Face Detection with OpenCV and MediaPipe
 
-This is a basic real-time face detection script using your webcam. It uses [MediaPipe](https://github.com/google/mediapipe) for face detection and [OpenCV](https://opencv.org/) for image processing and display.
+A real-time face detection application using your webcam, built with MediaPipe for robust face detection and OpenCV for image processing and display. This version includes enhanced bounding box styling and improved face-only targeting (excludes the neck).
+🛠️ Requirements
 
-## 🛠️ Requirements
+Install required packages:
 
-Make sure you have the following Python packages installed:
-
-```bash
 pip install opencv-python mediapipe
 
 📸 How It Works
 
     Captures video from your webcam (cv2.VideoCapture(0))
 
-    Uses MediaPipe's face detection model to detect faces in real-time
+    Uses MediaPipe's Face Detection model to detect faces
 
-    Draws bounding boxes around detected faces
+    Calculates and draws customized bounding boxes (excluding neck area)
 
-    Displays the frame rate (FPS) on the screen
+    Adds styled corner lines around each box
+
+    Displays detection confidence (%) and FPS on the video feed
 
 🚀 Running the Script
 
@@ -26,18 +26,28 @@ python face_detection.py
 Press q to quit the video window.
 📄 Output
 
-    Face bounding boxes are drawn directly onto the video feed
+    💠 Bounding boxes styled with colored corner lines
 
-    Console logs show the relative bounding box data for each detection
+    🎯 Boxes are adjusted to focus strictly on the face region
 
-    FPS is displayed in the top-left corner
+    🧠 Detection confidence score displayed above each face
+
+    ⚡ Real-time FPS displayed at the top-left corner
+
+    🖥️ Console prints detection scores and bounding box info
 
 📁 File Overview
 
-    face_detection.py: The main script
+    face_detection.py: Main script containing the FaceDetector class and execution loop
 
-    No additional resources are needed — runs directly from webcam input
+        Includes fancyDraw() for styled visual output
+
+        findFaces() processes detections and filters regions to exclude neck
 
 🧼 Exit and Cleanup
 
-The script cleanly releases the webcam and destroys all OpenCV windows when q is pressed.
+The script cleanly:
+
+    Releases the webcam
+
+    Destroys all OpenCV windows when q is pressed
